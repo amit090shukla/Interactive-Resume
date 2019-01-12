@@ -1,0 +1,10 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+.d-f {
+  display: flex;
+}
+.d-f-c {
+  display: flex;
+  flex-direction: column;
+}
