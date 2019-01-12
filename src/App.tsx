@@ -19,10 +19,12 @@ class App extends React.Component<{}, State> {
       SidebarData,
       val => val.stateIdentifier === this.state.selectedSection
     );
-    console.log(bg);
     return (
       <div>
-        <SideBar changeSection={changeSelectedSection} />
+        <SideBar
+          changeSection={changeSelectedSection}
+          activeSection={this.state.selectedSection}
+        />
         <SelectedSectionData
           currentSection={this.state.selectedSection}
           bgColor={bg ? bg.color : "#000"}
