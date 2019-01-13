@@ -7,7 +7,6 @@ const SidebarData = [
   {
     sectionName: "Education",
     color: "#2ACE71",
-
     stateIdentifier: "edu"
   },
   {
