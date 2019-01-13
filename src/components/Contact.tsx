@@ -22,7 +22,8 @@ const textStyle = {
   alignSelf: "center",
   fontSize: "1.1em",
   color: "#4c4c4c",
-  marginLeft: "10px"
+  marginLeft: "10px",
+  textDecoration: "none"
 };
 export default class Contact extends React.Component<ContactProps, any> {
   public render() {
@@ -40,37 +41,49 @@ export default class Contact extends React.Component<ContactProps, any> {
           <b>Phone</b>
         </span>
         : <span>XXX-XXX-XXXX</span>
+        <h2>You can see my work on these platforms</h2>
         <div className="d-f" style={{ justifyContent: "space-between" }}>
           <div style={{ width: "30%" }}>
-            <div style={contactContainerStyle}>
-              <FaGitSquare size="3em" color="#333" />
-              <div style={textStyle}>Github</div>
-            </div>
-            <div style={contactContainerStyle}>
-              <FaLinkedin size="3em" color="#0077b5" />
-              <div style={textStyle}>LinkedIn</div>
-            </div>
+            <a href="#" target="_blank">
+              <div style={contactContainerStyle}>
+                <FaGitSquare size="3em" color="#333" />
+                <div style={textStyle}>Github</div>
+              </div>
+            </a>
+            <a href="#" target="_blank">
+              <div style={contactContainerStyle}>
+                <FaLinkedin size="3em" color="#0077b5" />
+                <div style={textStyle}>LinkedIn</div>
+              </div>
+            </a>
           </div>
           <div style={{ width: "30%" }}>
-            <div style={contactContainerStyle}>
-              <FaBehanceSquare size="3em" color="#1769ff" />
-              <div style={textStyle}>Behance</div>
-            </div>
-
-            <div style={contactContainerStyle}>
-              <FaMedium size="3em" color="#222221" />
-              <div style={textStyle}>Medium</div>
-            </div>
+            <a href="#" target="_blank">
+              <div style={contactContainerStyle}>
+                <FaBehanceSquare size="3em" color="#1769ff" />
+                <div style={textStyle}>Behance</div>
+              </div>
+            </a>
+            <a href="#" target="_blank">
+              <div style={contactContainerStyle}>
+                <FaMedium size="3em" color="#222221" />
+                <div style={textStyle}>Medium</div>
+              </div>
+            </a>
           </div>
           <div style={{ width: "30%" }}>
-            <div style={contactContainerStyle}>
-              <FaYoutubeSquare size="3em" color="#ff0000" />
-              <div style={textStyle}>YouTube</div>
-            </div>
-            <div style={contactContainerStyle}>
-              <MdMail size="3em" color={this.props.color} />
-              <div style={textStyle}>Mail</div>
-            </div>
+            <a href="#" target="_blank">
+              <div style={contactContainerStyle}>
+                <FaYoutubeSquare size="3em" color="#ff0000" />
+                <div style={textStyle}>YouTube</div>
+              </div>
+            </a>
+            <a href="#" target="_blank">
+              <div style={contactContainerStyle}>
+                <MdMail size="3em" color={this.props.color} />
+                <div style={textStyle}>Mail</div>
+              </div>
+            </a>
           </div>
         </div>
       </div>

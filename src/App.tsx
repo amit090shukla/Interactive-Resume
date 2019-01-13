@@ -20,7 +20,7 @@ class App extends React.Component<{}, State> {
       val => val.stateIdentifier === this.state.selectedSection
     );
     return (
-      <div>
+      <div style={{ boxShadow: "0 0 50px #171717" }}>
         <SideBar
           changeSection={changeSelectedSection}
           activeSection={this.state.selectedSection}
