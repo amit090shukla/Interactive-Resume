@@ -10,26 +10,80 @@ const GET_ICONS = (sectionName, isActive, color) => {
   switch (sectionName) {
     case "about": {
       return (
-        <AccountCircle style={{ color: `${isActive ? "#000" : color}` }} />
+        <AccountCircle
+          style={{
+            color: `${isActive ? color : "fff"}`,
+            width: "2.5em",
+            height: "2.5em",
+            margin: "0 36%",
+            marginTop: "20%"
+          }}
+        />
       );
     }
     case "edu": {
       return (
-        <AccountBalance style={{ color: `${isActive ? "#000" : color}` }} />
+        <AccountBalance
+          style={{
+            color: `${isActive ? color : "fff"}`,
+            width: "2.5em",
+            height: "2.5em",
+            margin: "0 36%",
+            marginTop: "20%"
+          }}
+        />
       );
     }
     case "certification": {
-      return <Class style={{ color: `${isActive ? "#000" : color}` }} />;
+      return (
+        <Class
+          style={{
+            color: `${isActive ? color : "fff"}`,
+            width: "2.5em",
+            height: "2.5em",
+            margin: "0 36%",
+            marginTop: "20%"
+          }}
+        />
+      );
     }
     case "portfolio": {
-      return <ColorLens style={{ color: `${isActive ? "#000" : color}` }} />;
+      return (
+        <ColorLens
+          style={{
+            color: `${isActive ? color : "fff"}`,
+            width: "2.5em",
+            height: "2.5em",
+            margin: "0 36%",
+            marginTop: "20%"
+          }}
+        />
+      );
     }
     case "contact": {
-      return <Email style={{ color: `${isActive ? "#000" : color}` }} />;
+      return (
+        <Email
+          style={{
+            color: `${isActive ? color : "fff"}`,
+            width: "2.5em",
+            height: "2.5em",
+            margin: "0 36%",
+            marginTop: "20%"
+          }}
+        />
+      );
     }
     case "default": {
       return (
-        <AccountCircle style={{ color: `${isActive ? "#000" : color}` }} />
+        <AccountCircle
+          style={{
+            color: `${isActive ? "#000" : "fff"}`,
+            width: "2.5em",
+            height: "2.5em",
+            margin: "0 36%",
+            marginTop: "20%"
+          }}
+        />
       );
     }
   }

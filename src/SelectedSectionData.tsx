@@ -24,12 +24,16 @@ export default class SelectedSectionData extends React.Component<Props, any> {
           Molestias sequi blanditiis minima libero pariatur quos atque molestiae
           vitae deleniti expedita ipsa cum aliquid beatae, dolor, minus, tenetur
           veniam a eveniet. Lorem ipsum dolor sit amet consectetur adipisicing
+          <br />
+          <br />
           elit. Velit ducimus ullam assumenda. Nemo, vero. Laudantium repellat
           labore deleniti, soluta reprehenderit, ipsa ex accusamus veritatis
           nostrum quis necessitatibus aperiam adipisci ratione. Lorem ipsum
           dolor sit amet, consectetur adipisicing elit. Aut explicabo, dolores
           omnis pariatur facilis deleniti voluptatibus! Provident laudantium,
           laborum consectetur, pariatur dolore molestias adipisci laboriosam
+          <br />
+          <br />
           corporis reiciendis ut similique porro. Lorem ipsum dolor sit amet
           consectetur adipisicing elit. Mollitia dolores ad non? Fugiat culpa a
           enim cumque ut eveniet ipsa sit officia id. Asperiores culpa eum

@@ -25,14 +25,21 @@ const SideBar = (props: any) => {
           onClick={() => changeSection(stateIdentifier)}
         >
           <span>
-            {GET_ICONS(sectionName, sectionName === activeSection, color)}
+            {GET_ICONS(
+              stateIdentifier,
+              stateIdentifier === activeSection,
+              color
+            )}
           </span>
           <Typography
             style={{
               color: `${
-                props.activeSection === stateIdentifier ? "#000" : "#fff"
+                props.activeSection === stateIdentifier ? color : "#fff"
               }`,
-              fontSize: "1.3em"
+              fontSize: "0.9em",
+              textTransform: "uppercase",
+              fontWeight: "bold",
+              letterSpacing: "3px"
             }}
             align="center"
           >
