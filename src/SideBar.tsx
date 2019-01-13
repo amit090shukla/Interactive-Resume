@@ -1,6 +1,6 @@
 import React from "react";
 import SidebarData from "./data/sections";
-import GET_ICONS from "./common/helper";
+import { GET_ICONS } from "./common/helper";
 import { Typography, Paper } from "@material-ui/core";
 import "./styles/global.css";
 

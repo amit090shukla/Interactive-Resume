@@ -10,9 +10,9 @@ const SidebarData = [
     stateIdentifier: "edu"
   },
   {
-    sectionName: "Certifications",
+    sectionName: "Work Experience",
     color: "#27AE5F",
-    stateIdentifier: "certification"
+    stateIdentifier: "work"
   },
   {
     sectionName: "Portfolio",
