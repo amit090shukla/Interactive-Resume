@@ -41,7 +41,7 @@ export default class Contact extends React.Component<ContactProps, any> {
           <b>Phone</b>
         </span>
         : <span>XXX-XXX-XXXX</span>
-        <h2>You can see my work on these platforms</h2>
+        <h2>You can catch me on these platforms</h2>
         <div className="d-f" style={{ justifyContent: "space-between" }}>
           <div style={{ width: "30%" }}>
             <a href="#" target="_blank">
