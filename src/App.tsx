@@ -1,9 +1,17 @@
 import * as React from "react";
-import SideBar from "./SideBar";
+import NavBar from "./NavBar";
 import SelectedSectionData from "./SelectedSectionData";
 import "./styles/global.css";
 import SidebarData from "./data/sections";
 import * as _ from "lodash";
+import styled from "styled-components";
+
+// Styled Components
+const AppContainer = styled.div`
+  box-shadow: 0 0 50px #171717;
+`;
+
+//------------------------------------------------------
 interface State {
   selectedSection: String;
 }
@@ -20,8 +28,8 @@ class App extends React.Component<{}, State> {
       val => val.stateIdentifier === this.state.selectedSection
     );
     return (
-      <div style={{ boxShadow: "0 0 50px #171717" }}>
-        <SideBar
+      <AppContainer>
+        <NavBar
           changeSection={changeSelectedSection}
           activeSection={this.state.selectedSection}
         />
@@ -29,7 +37,7 @@ class App extends React.Component<{}, State> {
           currentSection={this.state.selectedSection}
           bgColor={bg ? bg.color : "#000"}
         />
-      </div>
+      </AppContainer>
     );
   }
 }

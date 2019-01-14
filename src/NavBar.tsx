@@ -1,26 +1,42 @@
 import React from "react";
 import SidebarData from "./data/sections";
 import { GET_ICONS } from "./common/helper";
-import { Typography, Paper } from "@material-ui/core";
-import "./styles/global.css";
+import styled from "styled-components";
 
+// Styled Components
+const NavBarContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+`;
+
+const NavItems = styled.div`
+  height: 200px;
+  cursor: pointer;
+  width: 20%;
+`;
+
+const NavHeading = styled.div`
+  font-size: 0.9em;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-align: center;
+`;
+
+//---------------------------------------------------------------
 const SideBar = (props: any) => {
   const { activeSection } = props;
-
   const changeSection = (sectionName: string): void => {
     props.changeSection(sectionName);
   };
 
   return (
-    <Paper className="d-f" style={{ justifyContent: "space-around" }}>
+    <NavBarContainer>
       {SidebarData.map(({ sectionName, color, stateIdentifier }, index) => (
-        <div
+        <NavItems
           key={index}
           style={{
-            height: "200px",
-            background: `${activeSection === stateIdentifier ? "#fff" : color}`,
-            cursor: "pointer",
-            width: "20%"
+            background: `${activeSection === stateIdentifier ? "#fff" : color}`
           }}
           onClick={() => changeSection(stateIdentifier)}
         >
@@ -31,23 +47,18 @@ const SideBar = (props: any) => {
               color
             )}
           </span>
-          <Typography
+          <NavHeading
             style={{
               color: `${
                 props.activeSection === stateIdentifier ? color : "#fff"
-              }`,
-              fontSize: "0.9em",
-              textTransform: "uppercase",
-              fontWeight: "bold",
-              letterSpacing: "3px"
+              }`
             }}
-            align="center"
           >
             {sectionName}
-          </Typography>
-        </div>
+          </NavHeading>
+        </NavItems>
       ))}
-    </Paper>
+    </NavBarContainer>
   );
 };
 
