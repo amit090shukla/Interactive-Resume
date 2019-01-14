@@ -141,3 +141,17 @@ export const DESIGNING_SKILLS = [
     )
   }
 ];
+
+export const BOOKS = [
+  { name: "12 Rules for Life", isbn: "9780241351659" },
+  {
+    name: "Hooked: How to Build Habit-Forming Products",
+    isbn: "9780143193524"
+  },
+  { name: "The Design of Everyday Things", isbn: "9780465050659" },
+
+  { name: "You Don't Know JS", isbn: "9781449335588" },
+  { name: "Rich Dad Poor Dad", isbn: "9789796559275" },
+  { name: "Think and Grow Rich", isbn: "9788193540107" },
+  { name: "Don't Make Me Think", isbn: "9783958457669" }
+];
