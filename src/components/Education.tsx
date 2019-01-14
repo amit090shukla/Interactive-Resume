@@ -6,7 +6,7 @@ import {
   FaHtml5,
   FaVuejs,
   FaGit
-} from "react-icons/fa";
+} from "react-icons/all";
 export interface EducationProps {}
 const eduContainerStyle = {
   padding: "20px 10px",
@@ -77,31 +77,62 @@ export default class Education extends React.Component<EducationProps, any> {
             </div>
           </div>
         </div>
-        <h2>Skills 💪</h2>
-        <div className="d-f" style={{ justifyContent: "space-between" }}>
-          <div>
+        <h2>Programming Skills 💪</h2>
+        <div className="d-f" style={{}}>
+          <div style={{ width: "10%" }}>
             <FaJsSquare size="3em" color="#f7df1e" />
             <div>Javascript</div>
           </div>
-          <div>
+          <div style={{ width: "10%" }}>
             <FaReact size="3em" color="#00d8ff" />
             <div>React</div>
           </div>
-          <div>
-            <FaCss3 size="3em" color="#002561" />
-            <div>CSS3</div>
-          </div>
-          <div>
-            <FaHtml5 size="3em" color="#e34f26" />
-            <div>HTML5</div>
-          </div>
-          <div>
+          <div style={{ width: "10%" }}>
             <FaVuejs size="3em" color="#42b883" />
             <div>VueJS</div>
           </div>
-          <div>
+          <div style={{ width: "10%" }}>
             <FaGit size="3em" color="#333" />
             <div>Git</div>
+          </div>
+        </div>
+        <h2>Designing Skills pen 🖋</h2>
+        <div className="d-f">
+          <div style={{ width: "10%" }}>
+            <FaCss3 size="3em" color="#002561" />
+            <div>CSS3</div>
+          </div>
+          <div style={{ width: "10%" }}>
+            <FaHtml5 size="3em" color="#e34f26" />
+            <div>HTML5</div>
+          </div>
+          <div style={{ width: "10%" }}>
+            <i
+              className="fab fa-adobe"
+              style={{ fontSize: "3em", color: "#ff0000" }}
+            />
+            <div>Adobe XD</div>
+          </div>
+          <div style={{ width: "10%" }}>
+            <i
+              className="fab fa-sketch"
+              style={{ fontSize: "3em", color: "#fa6400" }}
+            />
+            <div>Sketch</div>
+          </div>
+          <div style={{ width: "10%" }}>
+            <i
+              className="fab fa-figma"
+              style={{ fontSize: "3em", color: "rgb(138, 138, 138)" }}
+            />
+            <div>Figma</div>
+          </div>
+          <div style={{ width: "10%" }}>
+            <i
+              className="fab fa-invision"
+              style={{ fontSize: "3em", color: "#ff3366" }}
+            />
+            <div>Invision</div>
           </div>
         </div>
       </div>

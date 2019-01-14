@@ -13,3 +13,10 @@ body {
 a {
   text-decoration: none;
 }
+h3,
+h4 {
+  margin-bottom: 0.5em;
+}
+p {
+  margin-bottom: 0.5em;
+}
