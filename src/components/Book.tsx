@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-
+import { API_KEY } from "../config";
 export interface BookProps {
   isbn: String;
 }
@@ -22,7 +22,7 @@ export default class Book extends React.Component<BookProps, any> {
   };
   componentDidMount() {
     fetch(
-      `https://www.googleapis.com/books/v1/volumes?key=AIzaSyA_7Fj0xFDLPw3CHV1d9yfBS7uATRRfpus&q=isbn:${
+      `https://www.googleapis.com/books/v1/volumes?key=${API_KEY}&q=isbn:${
         this.props.isbn
       }`
     )
