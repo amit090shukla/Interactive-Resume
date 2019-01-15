@@ -69,10 +69,19 @@ export const GET_SECTION_DATA_FROM_NAME = (sectionName, bgColor) => {
 export const CERTIFICATES = [
   {
     name: "Emotional Design — How to Make Products People Will Love",
-    link: "#"
+    link:
+      "https://www.interaction-design.org/amit-shukla/certificate/course/Prrlkx5rt"
   },
-  { name: "User Research – Methods and Best Practices", link: "#" },
-  { name: "Mobile User Experience (UX) Design", link: "#" }
+  {
+    name: "User Research – Methods and Best Practices",
+    link:
+      "https://www.interaction-design.org/amit-shukla/certificate/course/Prrk5g4TR"
+  },
+  {
+    name: "Mobile User Experience (UX) Design",
+    link:
+      "https://www.interaction-design.org/amit-shukla/certificate/course/P0JN2lMg0"
+  }
 ];
 
 const iconStyle = {

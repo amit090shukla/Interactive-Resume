@@ -25,9 +25,11 @@ export default class Education extends React.Component<{}, any> {
         <div className="d-f s-b">
           <EducationContainer>
             <h3>B.Tech in Computer Science & Engineering</h3>
-            <span>LNMIIT Jaipur</span>
-            <br />
-            <span>2014-2018</span>
+            <h4 style={{ margin: ".5em 0 0.2em 0", color: "#545454" }}>
+              The LNM Institute of Information Technology
+            </h4>
+            <span>7.52 / 10 CGPA</span>
+            <div>2014-2018</div>
           </EducationContainer>
           <EducationContainer>
             <h3>UX Certifications 📑</h3>

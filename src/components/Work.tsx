@@ -36,12 +36,7 @@ export default class Work extends React.Component<WorkProps, any> {
               <FaHtml5 color="#e34f26" style={{ marginRight: "8px" }} />
               <FaGitSquare color="#333" style={{ marginRight: "8px" }} />
             </div>
-            <span>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
-              animi incidunt error eos architecto nisi sapiente blanditiis
-              minima. Labore illo excepturi dolor suscipit praesentium magnam
-              iste cumque? Praesentium, reiciendis dignissimos?
-            </span>
+            <span>Working on Machine Assisted Protective Intelligence. </span>
             <br />
           </div>
           <div style={workContainerStyle}>
