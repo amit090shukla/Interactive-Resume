@@ -1,5 +1,6 @@
 import * as React from "react";
 import "../styles/global.css";
+import profileImage from "../assets/download.png";
 export interface AboutProps {}
 
 export default class About extends React.Component<AboutProps, any> {
@@ -13,7 +14,7 @@ export default class About extends React.Component<AboutProps, any> {
         >
           <div className="image" style={{ width: "15%" }}>
             <img
-              src="https://www.biowritingservice.com/wp-content/themes/tuborg/images/Executive%20Bio%20Sample%20Photo.png"
+              src={profileImage}
               alt="Profile Image"
               style={{ width: "100%" }}
             />
