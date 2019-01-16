@@ -1,13 +1,41 @@
 import * as React from "react";
 import { Paper } from "@material-ui/core";
-import { GET_SECTION_DATA_FROM_NAME } from "./common/helper";
+import { RouteComponentProps } from "react-router-dom";
+import About from "./components/About";
+import Education from "./components/Education";
+import Work from "./components/Work";
+import Portfolio from "./components/Portfolio";
+import Contact from "./components/Contact";
 
-export interface Props {
-  currentSection: String;
+interface Props {
   bgColor: any;
 }
-
-export default class SelectedSectionData extends React.Component<Props, any> {
+interface RouterProps {
+  tab: any;
+}
+export default class SelectedSectionData extends React.Component<
+  Props & RouteComponentProps<RouterProps>,
+  any
+> {
+  getSectionComponent = (bgColor: String) => {
+    const tab = this.props.match.params.tab;
+    switch (tab) {
+      case "edu": {
+        return <Education />;
+      }
+      case "work": {
+        return <Work />;
+      }
+      case "portfolio": {
+        return <Portfolio />;
+      }
+      case "contact": {
+        return <Contact color={bgColor} />;
+      }
+      default:
+        return <About />;
+    }
+  };
   public render() {
     return (
       <Paper
@@ -17,10 +45,7 @@ export default class SelectedSectionData extends React.Component<Props, any> {
           color: "#000"
         }}
       >
-        {GET_SECTION_DATA_FROM_NAME(
-          this.props.currentSection,
-          this.props.bgColor
-        )}
+        {this.getSectionComponent(this.props.bgColor)}
       </Paper>
     );
   }

@@ -1,6 +1,7 @@
 import * as React from "react";
 import NavBar from "./NavBar";
 import SelectedSectionData from "./SelectedSectionData";
+import { RouteComponentProps } from "react-router-dom";
 import "./styles/global.css";
 import SidebarData from "./data/sections";
 import * as _ from "lodash";
@@ -15,7 +16,7 @@ const AppContainer = styled.div`
 interface State {
   selectedSection: String;
 }
-class App extends React.Component<{}, State> {
+class App extends React.Component<RouteComponentProps<any>, State> {
   state: State = {
     selectedSection: "about"
   };
@@ -33,10 +34,7 @@ class App extends React.Component<{}, State> {
           changeSection={changeSelectedSection}
           activeSection={this.state.selectedSection}
         />
-        <SelectedSectionData
-          currentSection={this.state.selectedSection}
-          bgColor={bg ? bg.color : "#000"}
-        />
+        <SelectedSectionData bgColor={bg ? bg.color : "#000"} {...this.props} />
       </AppContainer>
     );
   }

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import SidebarData from "./data/sections";
 import { GET_ICONS } from "./common/helper";
 import styled from "styled-components";
@@ -12,7 +13,6 @@ const NavBarContainer = styled.div`
 const NavItems = styled.div`
   height: 200px;
   cursor: pointer;
-  width: 20%;
 `;
 
 const NavHeading = styled.div`
@@ -24,7 +24,7 @@ const NavHeading = styled.div`
 `;
 
 //---------------------------------------------------------------
-const SideBar = (props: any) => {
+const NavBar = (props: any) => {
   const { activeSection } = props;
   const changeSection = (sectionName: string): void => {
     props.changeSection(sectionName);
@@ -33,33 +33,41 @@ const SideBar = (props: any) => {
   return (
     <NavBarContainer>
       {SidebarData.map(({ sectionName, color, stateIdentifier }, index) => (
-        <NavItems
+        <Link
+          to={`/${stateIdentifier === "about" ? "" : stateIdentifier}`}
           key={index}
-          style={{
-            background: `${activeSection === stateIdentifier ? "#fff" : color}`
-          }}
-          onClick={() => changeSection(stateIdentifier)}
+          style={{ width: "20%" }}
         >
-          <span>
-            {GET_ICONS(
-              stateIdentifier,
-              stateIdentifier === activeSection,
-              color
-            )}
-          </span>
-          <NavHeading
+          <NavItems
+            key={index}
             style={{
-              color: `${
-                props.activeSection === stateIdentifier ? color : "#fff"
+              background: `${
+                activeSection === stateIdentifier ? "#fff" : color
               }`
             }}
+            onClick={() => changeSection(stateIdentifier)}
           >
-            {sectionName}
-          </NavHeading>
-        </NavItems>
+            <span>
+              {GET_ICONS(
+                stateIdentifier,
+                stateIdentifier === activeSection,
+                color
+              )}
+            </span>
+            <NavHeading
+              style={{
+                color: `${
+                  props.activeSection === stateIdentifier ? color : "#fff"
+                }`
+              }}
+            >
+              {sectionName}
+            </NavHeading>
+          </NavItems>
+        </Link>
       ))}
     </NavBarContainer>
   );
 };
 
-export default SideBar;
+export default NavBar;

@@ -1,14 +1,9 @@
 import React from "react";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import AccountBalance from "@material-ui/icons/AccountBalance";
-import Work from "../components/Work";
 import ColorLens from "@material-ui/icons/ColorLens";
 import { Work as WorkIcon } from "@material-ui/icons/";
 import Email from "@material-ui/icons/Email";
-import About from "../components/About";
-import Education from "../components/Education";
-import Portfolio from "../components/Portfolio";
-import Contact from "../components/Contact";
 import { FaJsSquare, FaReact, FaCss3, FaHtml5, FaVuejs } from "react-icons/fa";
 
 export const GET_ICONS = (sectionName, isActive, color) => {
@@ -39,29 +34,6 @@ export const GET_ICONS = (sectionName, isActive, color) => {
     }
     default: {
       return <AccountCircle style={iconStyles} />;
-    }
-  }
-};
-
-export const GET_SECTION_DATA_FROM_NAME = (sectionName, bgColor) => {
-  switch (sectionName) {
-    case "about": {
-      return <About />;
-    }
-    case "edu": {
-      return <Education />;
-    }
-    case "work": {
-      return <Work />;
-    }
-    case "portfolio": {
-      return <Portfolio />;
-    }
-    case "contact": {
-      return <Contact color={bgColor} />;
-    }
-    default: {
-      return null;
     }
   }
 };

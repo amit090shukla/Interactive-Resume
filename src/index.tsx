@@ -1,11 +1,11 @@
 import * as React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import App from "./App";
-import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    <Route path="/:tab?" component={App} />
   </BrowserRouter>,
   document.getElementById("root")
 );
