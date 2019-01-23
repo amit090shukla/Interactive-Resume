@@ -1,7 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
-import { API_KEY } from "../config";
-export interface BookProps {
+import { API_KEY } from "../config.js";
+
+interface BookProps {
   isbn: String;
 }
 

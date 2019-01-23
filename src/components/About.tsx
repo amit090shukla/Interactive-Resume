@@ -1,6 +1,9 @@
 import * as React from "react";
 import "../styles/global.css";
 import profileImage from "../assets/download.png";
+import designer from "../assets/designer.svg";
+import developer from "../assets/developer.svg";
+import casual from "../assets/casual.svg";
 export interface AboutProps {}
 
 export default class About extends React.Component<AboutProps, any> {
@@ -12,14 +15,10 @@ export default class About extends React.Component<AboutProps, any> {
           className="section-container d-f"
           style={{ justifyContent: "space-between" }}
         >
-          <div className="image" style={{ width: "15%" }}>
-            <img
-              src={profileImage}
-              alt="Profile Image"
-              style={{ width: "100%" }}
-            />
+          <div className="image" style={{ width: "30%" }}>
+            <img src={casual} alt="Profile Image" style={{ width: "100%" }} />
           </div>
-          <div className="about-me" style={{ width: "82%" }}>
+          <div className="about-me" style={{ width: "65%" }}>
             <h4>Me talking about myself</h4>
             <span>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
@@ -34,6 +33,13 @@ export default class About extends React.Component<AboutProps, any> {
               Repellendus, aut. Iusto, doloribus pariatur.
             </span>
           </div>
+          {/* <div className="image" style={{ width: "22%" }}>
+            <img
+              src={developer}
+              alt="Profile Image"
+              style={{ width: "100%" }}
+            />
+          </div> */}
         </div>
       </div>
     );
