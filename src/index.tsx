@@ -5,7 +5,7 @@ import App from "./App";
 
 ReactDOM.render(
   <BrowserRouter>
-    <Route path="/:tab?" component={App} />
+    <Route path="/:tab?" component={App} exact />
   </BrowserRouter>,
   document.getElementById("root")
 );

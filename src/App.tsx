@@ -18,8 +18,11 @@ interface State {
 }
 class App extends React.Component<RouteComponentProps<any>, State> {
   state: State = {
-    selectedSection: "about"
+    selectedSection: `${
+      this.props.match.params.tab ? this.props.match.params.tab : "home"
+    }`
   };
+
   render() {
     const changeSelectedSection = (newSection: String): void => {
       this.setState({ selectedSection: newSection });
